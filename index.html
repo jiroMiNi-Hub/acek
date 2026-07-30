@@ -4,6 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ACE K Clinic</title>
+    <script>
+      // On GitHub Pages the repo root is served as-is, while the production
+      // build lives in /docs. Redirect visitors to the built site when
+      // browsing the Pages URL (keeps local dev and previews unaffected).
+      if (location.hostname.endsWith('github.io')) {
+        location.replace('./docs/');
+      }
+    </script>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=./docs/" />
+    </noscript>
   </head>
   <body>
     <div id="root"></div>
