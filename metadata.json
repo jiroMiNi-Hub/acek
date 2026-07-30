@@ -1,0 +1,6 @@
+{
+  "name": "ACE K Clinic",
+  "description": "Premium Beauty & Aesthetic Clinic featuring services, instant bookings, results gallery, and professional consultations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,91 @@
+{
+  "entities": {
+    "content": {
+      "title": "Clinic General Content",
+      "description": "General settings, clinic name, CEO message, contact info",
+      "type": "document",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "clinicName": { "type": "string" },
+          "tagline": { "type": "string" },
+          "phone": { "type": "string" },
+          "email": { "type": "string" },
+          "address": { "type": "string" },
+          "ceoMessageEn": { "type": "string" },
+          "ceoMessageKo": { "type": "string" }
+        }
+      }
+    },
+    "services": {
+      "title": "Treatment Services",
+      "description": "Clinic services and aesthetic protocols",
+      "type": "collection",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "nameKo": { "type": "string" },
+          "category": { "type": "string" },
+          "price": { "type": "number" },
+          "duration": { "type": "number" },
+          "description": { "type": "string" },
+          "descriptionKo": { "type": "string" },
+          "image": { "type": "string" },
+          "order": { "type": "number" }
+        },
+        "required": ["name", "price"]
+      }
+    },
+    "products": {
+      "title": "Skincare Products",
+      "description": "Medical skincare products catalog",
+      "type": "collection",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "nameKo": { "type": "string" },
+          "price": { "type": "number" },
+          "volume": { "type": "string" },
+          "image": { "type": "string" },
+          "order": { "type": "number" }
+        },
+        "required": ["name", "price"]
+      }
+    },
+    "gallery": {
+      "title": "Clinic Gallery Photos",
+      "description": "Facility and result gallery photos",
+      "type": "collection",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "imageUrl": { "type": "string" },
+          "category": { "type": "string" },
+          "order": { "type": "number" }
+        },
+        "required": ["imageUrl"]
+      }
+    },
+    "bookings": {
+      "title": "Patient Appointment Bookings",
+      "description": "Reservation requests submitted by patients",
+      "type": "collection",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "patientName": { "type": "string" },
+          "patientEmail": { "type": "string" },
+          "patientPhone": { "type": "string" },
+          "serviceName": { "type": "string" },
+          "date": { "type": "string" },
+          "timeSlot": { "type": "string" },
+          "status": { "type": "string" }
+        },
+        "required": ["patientName", "patientPhone", "serviceName", "date", "timeSlot"]
+      }
+    }
+  }
+}
